@@ -24,7 +24,9 @@ class DW_Download_icon {
         // add inline css
         wp_register_style( 'dw-document-library-pro', false );
         wp_enqueue_style( 'dw-document-library-pro' );
-        wp_add_inline_style('dw-document-library-pro', '.dlp-table-document-link-wrap .dlp-file-icon{ width: 30px; height: 30px; }');
+        wp_add_inline_style('dw-document-library-pro', '
+        .dlp-grid-card-document-link-wrap .dlp-file-icon,
+        .dlp-table-document-link-wrap .dlp-file-icon{ width: 30px; height: 30px; }');
     }
 
     public function document_library_pro_icon_svg($svg_array) {
