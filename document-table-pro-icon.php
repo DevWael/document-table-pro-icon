@@ -22,7 +22,9 @@ class DW_Download_icon {
 
     public function enqueue_scripts(){
         // add inline css
-        wp_add_inline_style('dw-document-library-pro', '.dlp-download-link{ width: 30px; height: 30px; }');
+        wp_register_style( 'dw-document-library-pro', false );
+        wp_enqueue_style( 'dw-document-library-pro' );
+        wp_add_inline_style('dw-document-library-pro', '.dlp-table-document-link-wrap .dlp-file-icon{ width: 30px; height: 30px; }');
     }
 
     public function document_library_pro_icon_svg($svg_array) {
